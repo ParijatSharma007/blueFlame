@@ -1,0 +1,46 @@
+.stepper_sec {
+  background: var(--white);
+  border: 1px solid rgba(49, 198, 254, 0.7);
+  border-radius: 10px;
+  padding: 52px 30px;
+  height: 100%;
+  :global(.MuiStepLabel-vertical) {
+    :global(.Mui-active) {
+      &:global(.MuiStepLabel-label) {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--stepperTextActive);
+      }
+      svg {
+        color: var(--activeColor);
+        :global(.MuiStepIcon-text) {
+          fill: var(--white);
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+    &:global(.Mui-disabled) {
+      svg {
+        color: var(--white);
+        border: 1px solid var(--activeColor);
+        border-radius: 50%;
+        :global(.MuiStepIcon-text) {
+          fill: var(--stepperTextActive);
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+      :global(.MuiStepLabel-label) {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--primaryGreytwo);
+      }
+    }
+  }
+  :global(.MuiStepConnector-line) {
+    border-color: var(--activeColor);
+    border-left-style: dashed;
+    min-height: 40px;
+  }
+}

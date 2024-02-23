@@ -1,0 +1,125 @@
+.play_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 17px;
+  .play_left {
+    background: var(--activeBodyColor);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    flex-basis: 394px;
+    max-width: 394px;
+    padding: 25px 20px;
+    height: 679px;
+    overflow-y: auto;
+    @media (max-width: 1500px) {
+      flex-basis: 294px;
+      max-width: 294px;
+    }
+    @media (max-width: 1024px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      height: 479px;
+    }
+    &::-webkit-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      display: none;
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: start;
+        padding: 21px 18px;
+        background: var(--playgItembg);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        &:hover {
+          background-color: var(--white);
+          border: 1px solid #c2eeff;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .text_area {
+          width: calc(100% - 31px);
+          padding-left: 13.6px;
+          h5 {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--sidebartextactive);
+          }
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            color: #ababab;
+          }
+        }
+      }
+    }
+  }
+  .play_right {
+    flex-basis: calc(100% - 394px);
+    max-width: calc(100% - 394px);
+    padding-left: 28px;
+    @media (max-width: 1500px) {
+      flex-basis: calc(100% - 294px);
+      max-width: calc(100% - 294px);
+      padding-left: 20px;
+    }
+    @media (max-width: 1024px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+    .page_right_inner {
+      background: var(--activeBodyColor);
+      border-radius: 10px;
+      padding: 0 17px 32px 17px;
+      .right_head {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--registerborderline);
+        @media (max-width: 899px) {
+          padding-bottom: 16px;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 16px;
+          color: var(--textcolortext);
+        }
+      }
+      .text_area_sec {
+        padding: 25px 0 35px 0;
+        :global(.MuiFormControl-root) {
+          width: 100%;
+          :global(.MuiInputBase-root) {
+            background: var(--playgfieldbg);
+            border-radius: 5px;
+            fieldset {
+              border: none;
+            }
+            :global(.MuiInputBase-input) {
+              font-weight: 400;
+              font-size: 14px;
+              text-transform: capitalize;
+              color: #ababab;
+            }
+          }
+        }
+        .btn_area {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 35px;
+          button {
+            > div {
+              background-color: var(--activeBodyColor);
+            }
+          }
+        }
+      }
+    }
+  }
+}

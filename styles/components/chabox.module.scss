@@ -1,0 +1,94 @@
+.chat_output {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    background: var(--chatboxbgleft);
+    border: 1px solid var(--chatboxbgleft);
+    border-radius: 10px 10px 10px 0px;
+    color: var(--sidebartextactive);
+    padding: 17px 17px 24px 24px;
+    max-width: 740px;
+  }
+}
+.dot {
+  button {
+    min-width: auto;
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+.chat_intput {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid var(--chatboxbgright);
+    background: transparent;
+    border-radius: 10px 10px 10px 0px;
+    color: var(--sidebartextactive);
+    padding: 17px 17px 24px 24px;
+    max-width: 740px;
+    order: 2;
+  }
+}
+.form_chat {
+  position: relative;
+  .form_control {
+    width: 100%;
+    background: var(--chatWriteBox2);
+    border-radius: 14px;
+  }
+  :global(.MuiOutlinedInput-notchedOutline) {
+    display: none;
+  }
+  :global(.MuiInputBase-input) {
+    border: 0;
+    height: 73px;
+    padding: 0px 65px 0px 24px;
+    color: var(--sidebartextactive);
+  }
+  .send_btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--activeHeaderColor2);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    min-width: auto;
+  }
+}
+.chat_wrap {
+  background: var(--cardboxbgbox);
+  box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 24px 20px;
+  margin-top: 40px;
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+
+    text-transform: capitalize;
+
+    color: var(--sidebartextactive);
+  }
+}
+.chat_inr {
+  height: 265px;
+  overflow-y: auto;
+}

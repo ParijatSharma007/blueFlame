@@ -1,0 +1,127 @@
+.tab_inner_archive {
+  max-width: 950px !important;
+}
+.tab_content_archive {
+  margin-top: 20px;
+  height: calc(100% - 125px);
+  .tab_inner {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+  .date_range {
+    
+    > div {
+      display: block;
+    }
+    p {
+      display: none;
+    }
+    &:last-child {
+      margin-top: 15px;
+    }
+    :global(.MuiFormControl-root) {
+      margin-left: 0;
+      
+      :global(.MuiInputBase-root) {
+        background-color: var(--white);
+        height: 50px;
+        width: 100%;
+      }
+    }
+  }
+  .btn_area {
+    margin-top: 30px;
+    text-align: end;
+    button {
+      > div {
+        padding: 12px 50px;
+      }
+    }
+  }
+  .config_area {
+    display: flex;
+    justify-content: space-between;
+  }
+  .config_box {
+    width: 100%;
+    flex-basis: 48%;
+    max-width: 48%;
+
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    padding: 20px;
+    background: #f5f8ff;
+    .toogle_sec {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      :global(.MuiTypography-body1) {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      :global(.MuiFormControlLabel-root) {
+        display: flex;
+        margin-right: 0;
+
+        :global(.MuiSwitch-root) {
+          order: 1;
+          height: 40px;
+        }
+        :global(.MuiButtonBase-root) {
+          order: 0;
+          top: 5px;
+          left: 5px;
+          &:hover {
+            background-color: transparent;
+          }
+          :global(.MuiSwitch-thumb) {
+            width: 12px;
+            height: 12px;
+            background-color: var(--primaryblack);
+          }
+        }
+        :global(.MuiSwitch-track) {
+          background-color: #dedede;
+          opacity: 1;
+          border-radius: 12px;
+        }
+      }
+      :global(.Mui-checked) + :global(.MuiSwitch-track) {
+        background-color: #4eacfe8c;
+      }
+    }
+    .select_drop {
+      :global(.MuiAutocomplete-root) {
+        width: 100%;
+      }
+      :global(.MuiInputBase-root) {
+        height: 50px;
+        width: 100%;
+        input {
+          height: auto;
+          border: none;
+        }
+        &:global(.Mui-focused) {
+          input {
+            height: auto;
+          }
+          fieldset {
+            border: 2px solid var(--activeColor);
+          }
+        }
+      }
+    }
+    .type_msg {
+      margin-top: 20px;
+      :global(.MuiFormControl-root) {
+        width: 100%;
+      }
+    }
+  }
+}

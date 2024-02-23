@@ -1,0 +1,188 @@
+.chat_sidebar {
+  box-shadow: none;
+  background-color: var(--cardboxbg);
+  nav {
+    padding: 0;
+    box-shadow: none;
+    position: static;
+  }
+
+  .chat_head {
+    background-color: var(--cardboxbg);
+    padding: 0;
+    display: block;
+    padding-bottom: 18px;
+    @media (max-width: 767px) {
+      background-color: var(--mainBodycolor) !important;
+    }
+    .chat_head_add {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      h3 {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--textcolortext);
+      }
+      button {
+        background: var(--activeBodyColor);
+        border: 1px solid var(--activeColor);
+        border-radius: 5px;
+        padding: 10px 17px 10px 42px;
+        position: relative;
+        font-weight: 500;
+        font-size: 15px;
+        color: var(--activeColor);
+        &:hover {
+          background-color: var(--activeColor);
+          color: var(--whiteColor);
+        }
+        svg {
+          position: absolute;
+          left: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+    .search_area {
+      margin-top: 21px;
+      :global(.MuiInputBase-root) {
+        background-color: var(--searchcolorbg);
+        height: 44px;
+        padding: 0;
+        input {
+          padding-left: 17px;
+          height: auto;
+          padding-right: 35px;
+          color: var(--sidebartextactive);
+          &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: #dedede;
+            opacity: 1;
+          }
+        }
+        fieldset {
+          border: 1px solid var(--searchcolorborder);
+          border-radius: 5px;
+        }
+        :global(.MuiButtonBase-root) {
+          padding: 0;
+          min-width: auto;
+          width: 40px;
+          background-color: transparent;
+          position: absolute;
+          right: 8px;
+          svg {
+            path {
+              fill: #dbdbdb;
+            }
+          }
+        }
+      }
+    }
+  }
+  .userlist {
+    background: var(--activeBodyColor);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 19px 17px;
+    margin-bottom: 20px;
+    @media (max-width: 767px) {
+      background-color: var(--chatfieldmobile);
+    }
+    &.userlistactive {
+      border: 1px solid var(--activeColor3);
+    }
+    // &.mobileuserlist {
+    //   @media (max-width: 767px) {
+    //     background-color: var(--white);
+    //     border: 1px solid var(--activeColor);
+    //   }
+    // }
+    &:hover {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+      @media (max-width: 767px) {
+        background-color: var(--white);
+        border: 1px solid var(--activeColor);
+      }
+    }
+    cursor: pointer;
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4 {
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: var(--sidebartextactive);
+      }
+      small {
+        font-weight: 500;
+        font-size: 12px;
+        color: #c2c2c2;
+      }
+    }
+    span {
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--activeColor2);
+    }
+    .msg_txt {
+      display: flex;
+      align-items: start;
+      margin-top: 7px;
+      justify-content: space-between;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #ababab;
+        line-height: 1.2;
+        width: 100%;
+        max-width: 268px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .number_show {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(153.77deg, #4eacfe -0.65%, #24d1fe 95.1%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--whiteColor);
+      }
+    }
+  }
+  .side_list_body {
+    overflow-y: scroll;
+    padding: 0 4px 0 0;
+    @media (max-width: 767px) {
+      background-color: var(--mainBodycolor);
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(49, 198, 254, 0.25);
+      border-radius: 10px;
+    }
+  }
+}

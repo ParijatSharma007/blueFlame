@@ -1,0 +1,129 @@
+.common_modal {
+  height: 100vh;
+  overflow: hidden;
+  :global(.MuiPaper-root) {
+    background: var(--activesideDashboard);
+    box-shadow: -10px 14px 105px rgba(22, 35, 46, 0.2);
+    border-radius: 30px;
+    padding: 50px 30px;
+    width: 100%;
+    max-width: 504px;
+    // height: 290px;
+    overflow-y: auto;
+    @media (max-width: 767px) {
+      padding: 30px 20px;
+    }
+  }
+  :global(.MuiBackdrop-root) {
+    background-color: var(--backdrop);
+    backdrop-filter: blur(10px);
+  }
+}
+.Notes_modal {
+  h2 {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--textcolortext);
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  figure {
+    text-align: center;
+    margin-top: 70px;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+    img {
+      @media (max-width: 767px) {
+        width: 62px;
+        height: 58px;
+      }
+    }
+  }
+  :global(.MuiTypography-body1) {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--textcolortext);
+    text-align: center;
+    margin-top: 6px;
+  }
+  .form_field {
+    margin: 40px 0 26px 0;
+    @media (max-width: 767px) {
+      margin: 18px 0;
+    }
+    &:global(.MuiFormControl-root) {
+      width: 100%;
+      border-radius: 5px;
+    }
+    :global(.MuiInputLabel-root) {
+      color: var(--primarylabel);
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+    :global(.MuiInputBase-root) {
+      background: var(--modalfield);
+      height: 55px;
+
+      fieldset {
+        border: none;
+      }
+      :global(.MuiSvgIcon-root) {
+        path {
+          fill: var(--calenderrightboxtext);
+        }
+      }
+    }
+    :global(.Mui-focused) {
+      background-color: var(--white);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--activeColor);
+      fieldset {
+        border: 2px solid var(--activeColor);
+      }
+      :global(.MuiSelect-select) {
+        color: var(--activeColor);
+        em {
+          color: var(--activeColor);
+        }
+      }
+    }
+    :global(.Mui-error) {
+      color: var(--primaryred);
+      fieldset {
+        border: 2px solid var(--primaryred);
+      }
+    }
+    :global(.MuiSvgIcon-root) {
+      path {
+        fill: var(--black);
+      }
+    }
+    :global(.MuiSelect-select) {
+      color: #ababab;
+      em {
+        font-style: normal;
+        color: var(--primarylabel);
+      }
+    }
+  }
+  .btn_grp {
+    text-align: center;
+    button {
+      width: 100%;
+      max-width: 125px;
+      @media (max-width: 767px) {
+        max-width: 91px;
+      }
+      > div {
+        @media (max-width: 767px) {
+          padding: 9px;
+        }
+      }
+    }
+  }
+}

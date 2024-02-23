@@ -1,0 +1,428 @@
+.tab_bar {
+  background: var(--white);
+  border-radius: 10px;
+  margin-top: 25px;
+  .tab_inner {
+    width: 100%;
+    max-width: 1221px;
+    margin: auto;
+    @media (max-width: 1199px) {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+  }
+  .tab_sec {
+    text-align: center;
+    padding: 0;
+    @media (max-width: 1199px) {
+      min-width: 168px;
+    }
+    button {
+      padding: 20px 40px;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--stepperTextActive);
+      background-color: transparent !important;
+      border-radius: 0;
+      @media (max-width: 1199px) {
+        padding: 18px 30px;
+      }
+      &.active_btn {
+        font-weight: 600;
+        font-size: 16px;
+        width: fit-content;
+        border-bottom: 2px solid var(--activeColor);
+        color: var(--activeColor);
+      }
+    }
+  }
+}
+.tab_content {
+  margin: 69px 0;
+  @media (max-width: 991px) {
+    margin-top: 50px;
+  }
+  .integration_card {
+    background: var(--white);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid #c2eeff;
+    }
+    :global(.MuiCardContent-root) {
+      text-align: center;
+      padding: 26px 22px;
+      figure {
+        width: 51.86px;
+        height: 51.86px;
+        background: rgba(41, 204, 254, 0.08);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+      h5 {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--primaryblack);
+        margin: 10px 0 5px 0;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--stepperTextActive);
+        line-height: 1.2;
+      }
+    }
+  }
+  .card_command {
+    background: var(--white);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    .card_head {
+      display: flex;
+      align-items: center;
+      background: #f5f8ff;
+      border-radius: 10px;
+      padding: 21px 17px;
+      figure {
+        width: 51.86px;
+        height: 51.86px;
+        border-radius: 50%;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+      }
+      h5 {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--primaryblack);
+      }
+    }
+    ul {
+      padding: 0 17px;
+      @media (max-width: 1440px) {
+        padding: 0;
+      }
+      li {
+        display: block;
+        border-bottom: 1px solid #d5e9fb;
+        padding: 20px 0;
+        @media (max-width: 1440px) {
+          padding: 20px 17px;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        h6 {
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--stepperTextActive);
+          margin-bottom: 4px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--stepperTextActive);
+        }
+      }
+    }
+  }
+  .tuning_sec {
+    .vocabulary_sec {
+      padding-bottom: 39px;
+      border-bottom: 1px solid #d5e9fb;
+      h5 {
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--primaryblack);
+        margin-bottom: 16px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--stepperTextActive);
+      }
+    }
+    ul {
+      padding-top: 30px;
+      li {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--stepperTextActive);
+
+        padding: 5px 0;
+        padding-left: 30px;
+        &:last-child {
+          padding-bottom: 0 !important;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: 0;
+          background-image: url("/assets/images/blueTick.svg") !important;
+          width: 20px !important;
+          height: 15px !important;
+          border-radius: 0 !important;
+          background-color: transparent !important;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  .recipes {
+    :global(.MuiCard-root) {
+      background: var(--white);
+      box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+      border-radius: 10px;
+      :global(.MuiCardContent-root) {
+        padding: 22px 20px 30px 20px;
+        button {
+          > div {
+            padding: 10px 15px;
+          }
+        }
+        .recipe_head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 15px;
+
+          figure {
+            width: 51.86px;
+            height: 51.86px;
+            border-radius: 50%;
+            background: rgba(41, 204, 254, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          button {
+            &:hover {
+              background-color: #c2eeff4f;
+            }
+          }
+        }
+        .recipe_box {
+          margin-bottom: 18px;
+          .recipe_title {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            position: relative;
+            :global(.MuiFormControlLabel-root) {
+              display: flex;
+              margin-right: 0;
+              position: absolute;
+              right: -15px;
+              top: -12px;
+              :global(.MuiSwitch-root) {
+                order: 1;
+                height: 40px;
+              }
+              :global(.MuiButtonBase-root) {
+                order: 0;
+                top: 5px;
+                left: 5px;
+                &:hover {
+                  background-color: transparent;
+                }
+                :global(.MuiSwitch-thumb) {
+                  width: 12px;
+                  height: 12px;
+                  background-color: var(--primaryblack);
+                }
+              }
+              :global(.MuiSwitch-track) {
+                background-color: #dedede;
+                opacity: 1;
+                border-radius: 12px;
+              }
+            }
+            :global(.Mui-checked) + :global(.MuiSwitch-track) {
+              background-color: #4eacfe8c;
+            }
+          }
+        }
+        h6 {
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--primaryblack);
+          margin-bottom: 2px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--stepperTextActive);
+        }
+        ul {
+          position: relative;
+          padding: 0;
+          &::before {
+            content: "";
+            position: absolute;
+            border: 0.5px dashed #4eadfe;
+            height: calc(100% - 17px);
+            left: 2px;
+            top: 8px;
+            width: 0;
+          }
+          li {
+            padding: 0 0;
+            position: relative;
+            padding-left: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            height: 23px;
+
+            &:not(:last-child) {
+              padding-bottom: 10px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: var(--primaryMain);
+              left: 0;
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .model_card {
+    position: relative;
+    :global(.MuiCardContent-root) {
+      :global(.MuiButtonBase-root) {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+      }
+    }
+  }
+}
+
+.integration_rows {
+  @media (max-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -14px;
+    padding: 0;
+    width: 100%;
+    margin-bottom: -28px;
+    justify-content: center;
+    .integration_cols {
+      padding: 0 14px;
+      flex-basis: 25%;
+      max-width: 25%;
+      margin-bottom: 28px;
+    }
+  }
+  @media (max-width: 991px) {
+    .integration_cols {
+      flex-basis: 33.33%;
+      max-width: 33.33%;
+    }
+  }
+}
+.cmndcardsec_row {
+  flex-wrap: nowrap;
+  @media (max-width: 1199px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    margin: 0 -12px;
+    padding: 0;
+  }
+  .cmndcardsec_col {
+    @media (max-width: 1199px) {
+      min-width: 345px;
+      padding: 0 12px;
+    }
+  }
+}
+.recipes_row_part {
+  @media (max-width: 1520px) {
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 -20px;
+    padding: 0;
+    overflow-x: auto;
+    .recipes_col_part {
+      max-width: 25%;
+      flex-basis: 25%;
+      padding: 0 20px;
+      min-width: 277px;
+    }
+  }
+}
+.intecard_modal {
+  .enabled_sec {
+    margin-top: 20px;
+    p {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--primaryblack);
+    }
+    :global(.MuiFormControlLabel-root) {
+      display: flex;
+      margin-right: 0;
+      justify-content: center;
+      // position: absolute;
+      // right: -15px;
+      // top: -12px;
+      :global(.MuiSwitch-root) {
+        order: 1;
+        height: 40px;
+      }
+      :global(.MuiButtonBase-root) {
+        order: 0;
+        top: 5px;
+        left: 5px;
+        &:hover {
+          background-color: transparent;
+        }
+        :global(.MuiSwitch-thumb) {
+          width: 12px;
+          height: 12px;
+          background-color: var(--primaryblack);
+        }
+      }
+      :global(.MuiSwitch-track) {
+        background-color: #dedede;
+        opacity: 1;
+        border-radius: 12px;
+      }
+    }
+
+    :global(.Mui-checked) + :global(.MuiSwitch-track) {
+      background-color: #4eacfe8c;
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--primaryblack);
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .btn_area {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

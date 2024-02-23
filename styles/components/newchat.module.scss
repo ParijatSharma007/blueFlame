@@ -1,0 +1,69 @@
+.new_chat_modal {
+  h2 {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--textcolortext);
+    text-align: center;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+  .form_field {
+    margin-top: 20px;
+    &:global(.MuiFormControl-root) {
+      width: 100%;
+      border-radius: 5px;
+    }
+    :global(.MuiInputLabel-root) {
+      color: var(--primarylabel);
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+    :global(.MuiInputBase-root) {
+      background: #f7f7f7;
+      height: 55px;
+      input {
+        border: none;
+      }
+      fieldset {
+        border: none;
+      }
+    }
+    :global(.Mui-focused) {
+      background-color: var(--white);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--activeColor);
+      fieldset {
+        border: 2px solid var(--activeColor);
+      }
+    }
+    :global(.Mui-error) {
+      color: var(--primaryred);
+      fieldset {
+        border: 2px solid var(--primaryred);
+      }
+    }
+  }
+  .btn_grp {
+    text-align: center;
+    margin-top: 25px;
+    button {
+      width: 100%;
+      max-width: 300px;
+
+      > div {
+        @media (max-width: 767px) {
+          padding: 9px;
+        }
+      }
+    }
+  }
+
+  .btn_grp_disabled {
+    button {
+      opacity: 0.5;
+    }
+  }
+}

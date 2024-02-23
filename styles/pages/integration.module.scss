@@ -1,0 +1,38 @@
+.box_paper_integration {
+  background: var(--cardboxbgbox);
+  border-radius: 10px;
+  display: flex;
+  align-items: start;
+  padding: 39px 33px;
+  box-shadow: none;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  figure {
+    width: 92.14px;
+    height: 92.14px;
+    border-radius: 50%;
+    background: rgba(41, 204, 254, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text_sec {
+    width: calc(100% - 92.14px);
+    padding-left: 33px;
+    h5 {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--textcolortext);
+      margin-bottom: 11px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--sidebartextactive);
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

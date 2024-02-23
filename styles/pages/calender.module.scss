@@ -1,0 +1,347 @@
+.calender_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 29px;
+
+  .search_right {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 83px);
+    justify-content: end;
+
+    :global(.MuiFormControl-root) {
+      margin: 0;
+      background: var(--searchcolorbg);
+      border-radius: 5px;
+      width: 100%;
+      max-width: 355px;
+
+      :global(.MuiInputBase-root) {
+        input {
+          height: 42px;
+          border: none;
+          color: var(--calenderrightboxtext);
+          &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--searchcolor);
+            opacity: 1;
+          }
+        }
+
+        fieldset {
+          border: 1px solid var(--searchcolorborder);
+        }
+
+        :global(.MuiInputAdornment-root) {
+          :global(.MuiButtonBase-root) {
+            padding: 0;
+            min-width: auto;
+            background-color: transparent;
+          }
+        }
+        svg {
+          color: var(--searchcolor);
+        }
+      }
+    }
+
+    .filter_btn {
+      background: var(--searchcolorbg);
+      border: 1px solid var(--activeColor3);
+      border-radius: 5px;
+      width: 54px;
+      height: 44px;
+      margin: 0 9px;
+
+      &:hover {
+        background-color: var(--activeColor3);
+
+        img {
+          filter: invert(74%) sepia(37%) saturate(47%) hue-rotate(224deg)
+            brightness(196%) contrast(139%);
+        }
+      }
+    }
+
+    .add_btn {
+      background: var(--searchcolorbg);
+      border: 1px solid var(--activeColor3);
+      border-radius: 5px;
+      padding: 9px 14px 9px 35px;
+      width: 100%;
+      max-width: 126px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--activeColor3);
+      position: relative;
+
+      svg {
+        position: absolute;
+        left: 10px;
+        font-weight: 200;
+      }
+
+      &:hover {
+        background-color: var(--activeColor3);
+        color: var(--whiteColor);
+      }
+    }
+  }
+}
+
+.paper_right {
+  padding-bottom: 60px;
+  box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background-color: var(--activeBodyColor);
+  .call_head {
+    background: var(--calenderrightboxhead);
+    border-radius: 10px 10px 0px 0px;
+    padding: 8px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h6 {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--calenderrightboxtext);
+    }
+    span {
+      color: var(--calenderrightboxtext);
+    }
+    :global(.MuiFormControlLabel-root) {
+      display: flex;
+      :global(.MuiSwitch-root) {
+        order: 1;
+        height: 40px;
+      }
+      :global(.MuiButtonBase-root) {
+        order: 0;
+        top: 5px;
+        left: 5px;
+        &:hover {
+          background-color: transparent;
+        }
+        :global(.MuiSwitch-thumb) {
+          width: 12px;
+          height: 12px;
+          background-color: #0a2540;
+        }
+      }
+      :global(.MuiSwitch-track) {
+        background-color: #dedede;
+        opacity: 1;
+        border-radius: 12px;
+      }
+    }
+    :global(.Mui-checked) + :global(.MuiSwitch-track) {
+      background-color: #4eacfe8c;
+    }
+  }
+
+  .body_sec {
+    padding: 0 29px;
+    background-color: var(--activeBodyColor);
+    .sub_head {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--textcolortext);
+      margin-bottom: 5px;
+    }
+
+    .gmeet {
+      padding: 20px 0;
+      display: flex;
+
+      justify-content: space-between;
+      border-bottom: 1px solid var(--calenderrightborder);
+      @media (max-width: 1199px) {
+        display: block;
+      }
+
+      .left_gmeet {
+        display: flex;
+        align-items: center;
+
+        .text_sec {
+          padding-left: 26px;
+
+          h5 {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--textcolortext);
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--calenderrightboxtext2);
+          }
+        }
+      }
+
+      .time_sec {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--activeColor2);
+        &.mbl {
+          display: none;
+          @media (max-width: 1199px) {
+            display: flex;
+            margin-top: 5px;
+          }
+        }
+        &.dsktp {
+          @media (max-width: 1199px) {
+            display: none;
+          }
+        }
+        svg {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .call_summary {
+      padding: 23px 0;
+      border-bottom: 1px solid var(--calenderrightborder);
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--calenderrightboxtext2);
+      }
+    }
+
+    .attendees {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--calenderrightborder);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .img_sec {
+        position: relative;
+        display: flex;
+
+        img {
+          border-radius: 50%;
+
+          &:nth-child(1) {
+          }
+
+          &:nth-child(2) {
+            margin-left: -10px;
+          }
+
+          &:nth-child(3) {
+            margin-left: -8px;
+          }
+
+          &:nth-child(4) {
+            margin-left: -6px;
+          }
+        }
+
+        .countimg {
+          width: 25px;
+          height: 25px;
+          background: #c5c5c5;
+          border-radius: 50%;
+          font-weight: 600;
+          font-size: 10px;
+          color: #767676;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: -6px;
+          min-width: auto;
+        }
+      }
+
+      .add_atn {
+        background: transparent;
+        border: 1px solid var(--activeColor3);
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--activeColor3);
+        position: relative;
+        padding: 5px 10px 5px 40px;
+
+        &:hover {
+          background: var(--activeColor3);
+          color: var(--whiteColor);
+        }
+
+        svg {
+          position: absolute;
+          left: 10px;
+        }
+      }
+    }
+
+    .transcript {
+      padding: 23px 0;
+      border-bottom: 1px solid var(--calenderrightborder);
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--calenderrightboxtext2);
+      }
+    }
+    .length {
+      padding: 23px 0;
+      border-bottom: 1px solid var(--calenderrightborder);
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--calenderrightboxtext2);
+      }
+    }
+    .activities {
+      padding: 20px 0;
+      position: relative;
+      button {
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        span {
+          font-weight: 700;
+          font-size: 14px;
+          color: var(--textcolortext);
+          padding: 0 12px;
+        }
+        img {
+        }
+      }
+      .plus_btn {
+        background: var(--activeColor3);
+        border: 1px solid var(--activeColor3);
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        min-width: auto;
+        position: absolute;
+        bottom: -26px;
+        right: 0;
+        &:hover {
+          background-color: transparent;
+          img {
+            filter: invert(60%) sepia(54%) saturate(1824%) hue-rotate(177deg)
+              brightness(101%) contrast(102%);
+          }
+        }
+      }
+    }
+  }
+}

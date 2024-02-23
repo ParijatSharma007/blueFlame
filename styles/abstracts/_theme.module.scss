@@ -1,0 +1,341 @@
+$activeColor: #31c6fe;
+$activeGray: #5f5f5f;
+$white: #fff;
+$activePurple: #7d5ba6;
+$activeGreen: #2c8c68;
+
+$themes: (
+  activeColor: (
+    darkTheme: $activeColor,
+    lightTheme: $activeColor
+  ),
+  activeColor2: (
+    darkTheme: #4eacfe,
+    lightTheme: #4eacfe
+  ),
+  activeColor3: (
+    darkTheme: #3abdfe,
+    lightTheme: #3abdfe
+  ),
+  whiteColor: (
+    darkTheme: #fff,
+    lightTheme: #fff
+  ),
+  mainBodycolor: (
+    darkTheme: #0a0a0a,
+    lightTheme: #fff
+  ),
+  activeBodyColor: (
+    darkTheme: #1d1d1d,
+    lightTheme: #fff
+  ),
+  activeHeaderColor: (
+    darkTheme: #000000,
+    lightTheme: #fff
+  ),
+  activeHeaderColor2: (
+    darkTheme: #4c4c4c,
+    lightTheme: #fff
+  ),
+  activesideDashboard: (
+    darkTheme: #030303,
+    lightTheme: #fff
+  ),
+  sidebartext: (
+    darkTheme: #727272,
+    lightTheme: #727272
+  ),
+  sidebartextactive: (
+    darkTheme: #ffffff,
+    lightTheme: #474c56
+  ),
+  sidebarhoveractive: (
+    darkTheme: #0a0a0a,
+    lightTheme: #f5f8ff
+  ),
+  cardboxbg: (
+    darkTheme: #2e2e2e,
+    lightTheme: #fbfbfb
+  ),
+  textcolortext: (
+    darkTheme: #ffffff,
+    lightTheme: #0a2540
+  ),
+  primarylabel: (
+    darkTheme: #ffffff,
+    lightTheme: #ababab
+  ),
+  chatheadline: (
+    darkTheme: #323232,
+    lightTheme: #dfdfdf
+  ),
+  chatWriteBox: (
+    darkTheme: #313131,
+    lightTheme: #f6f6f6
+  ),
+  chatWriteBoxtext: (
+    darkTheme: #fff,
+    lightTheme: #8a8989
+  ),
+  shareiconbg: (
+    darkTheme: rgba(255, 255, 255, 0.16),
+    lightTheme: #fff
+  ),
+  chatWriteBox2: (
+    darkTheme: #1d1d1d,
+    lightTheme: #f6f6f6
+  ),
+  chattime: (
+    darkTheme: #fff,
+    lightTheme: #c2c2c2
+  ),
+  blueshade: (
+    darkTheme: rgba(255, 255, 255, 0.53),
+    lightTheme: rgba(49, 198, 254, 0.25)
+  ),
+  blueshadeIcon: (
+    darkTheme: #fff,
+    lightTheme: #0d253d
+  ),
+  footerTwotext: (
+    darkTheme: #fff,
+    lightTheme: #656464
+  ),
+  cardboxbgbox: (
+    darkTheme: #333333,
+    lightTheme: #fff
+  ),
+  searchcolor: (
+    darkTheme: #6e6e6e,
+    lightTheme: #dbdbdb
+  ),
+  searchcolorborder: (
+    darkTheme: #424242,
+    lightTheme: #dbdbdb
+  ),
+  searchcolorbg: (
+    darkTheme: #424242,
+    lightTheme: #fff
+  ),
+  chatboxbgleft: (
+    darkTheme: #1d1d1d,
+    lightTheme: #f5f8ff
+  ),
+  chatboxbgleft2: (
+    darkTheme: #313131,
+    lightTheme: #f5f8ff
+  ),
+  chatboxbgright: (
+    darkTheme: #595959,
+    lightTheme: #e7e7e7
+  ),
+  taskboxtxt: (
+    darkTheme: #e7e7e7,
+    lightTheme: #000000
+  ),
+  calendertxt: (
+    darkTheme: #ffffff,
+    lightTheme: #1a191f
+  ),
+  calenderborder: (
+    darkTheme: #323232,
+    lightTheme: #f1f1f1
+  ),
+  calenderboxhighlight: (
+    darkTheme: #515151,
+    lightTheme: #f5f8ff
+  ),
+  accordiontxt: (
+    darkTheme: #444444,
+    lightTheme: #f5f8ff
+  ),
+  cardimgoverlay: (
+    darkTheme: rgba(255, 255, 255, 0.12),
+    lightTheme: rgba(41, 204, 254, 0.08)
+  ),
+  chatboxrecive: (
+    darkTheme: #1d1d1d,
+    lightTheme: #f5f8ff
+  ),
+  borderlinecolor: (
+    darkTheme: #686868,
+    lightTheme: #c2eeff
+  ),
+  borderlinecolor2: (
+    darkTheme: transparent,
+    lightTheme: #c2eeff
+  ),
+  backdrop: (
+    darkTheme: rgba(92, 92, 92, 0.26),
+    lightTheme: #ffffffb3
+  ),
+  backdrop2: (
+    darkTheme: rgba(92, 92, 92, 0.26),
+    lightTheme: rgba(0, 0, 0, 0.49)
+  ),
+  calendersort: (
+    darkTheme: rgba(255, 255, 255, 0.24),
+    lightTheme: rgba(63, 151, 249, 0.24)
+  ),
+  calendersorttxt: (
+    darkTheme: #ffffff,
+    lightTheme: #6c6a72
+  ),
+  calenderrightboxhead: (
+    darkTheme: #444444,
+    lightTheme: #f9f9f9
+  ),
+  calenderrightboxtext: (
+    darkTheme: #ffffff,
+    lightTheme: #000000
+  ),
+  calenderrightboxtext2: (
+    darkTheme: #ababab,
+    lightTheme: #474c56
+  ),
+  calenderrightborder: (
+    darkTheme: #323232,
+    lightTheme: #d5e9fb
+  ),
+  registersidebarTxt: (
+    darkTheme: rgba(255, 255, 255, 0.29),
+    lightTheme: #c3c3c3
+  ),
+  registerRight: (
+    darkTheme: #2e2e2e,
+    lightTheme: #ffffff
+  ),
+  registerfield: (
+    darkTheme: #424242,
+    lightTheme: #f7f7f7
+  ),
+  registercheck: (
+    darkTheme: #ffffff,
+    lightTheme: #767676
+  ),
+  registerborderline: (
+    darkTheme: #434343,
+    lightTheme: #d5e9fb
+  ),
+  primaryGrey: (
+    darkTheme: #ffffff,
+    lightTheme: #4f4e4e
+  ),
+  footerBg: (
+    darkTheme: #000,
+    lightTheme: #fff
+  ),
+  footerBgborder: (
+    darkTheme: #232323,
+    lightTheme: #ebebeb
+  ),
+  footerLabel: (
+    darkTheme: #31c6fe,
+    lightTheme: #0a2540
+  ),
+  cardCheck: (
+    darkTheme: #232323,
+    lightTheme: #d3e5f4
+  ),
+  infobg: (
+    darkTheme: rgba(255, 255, 255, 0.22),
+    lightTheme: #cccccc
+  ),
+  setupborder: (
+    darkTheme: #333333,
+    lightTheme: #f5f5f5
+  ),
+  modalfield: (
+    darkTheme: #333333,
+    lightTheme: #f7f7f7
+  ),
+  chatfieldmobile: (
+    darkTheme: #1d1d1d,
+    lightTheme: #f7f7f7
+  ),
+  slackboxbg: (
+    darkTheme: #333333,
+    lightTheme: #f8f8f8
+  ),
+  skipboxbg: (
+    darkTheme: rgba(239, 251, 255, 0.08),
+    lightTheme: #effbff
+  ),
+  skiptxt: (
+    darkTheme: #ffffff,
+    lightTheme: #4d4d4d
+  ),
+  notecardborder: (
+    darkTheme: #4b4b4b,
+    lightTheme: #f5f5f5
+  ),
+  recipeheadtxt: (
+    darkTheme: #31c6fe,
+    lightTheme: #0a2540
+  ),
+  recipesubheadtxt: (
+    darkTheme: rgba(255, 255, 255, 0.62),
+    lightTheme: #25d1fe
+  ),
+  primaryred: (
+    darkTheme: #f44336,
+    lightTheme: #f44336
+  ),
+  mobileheadiconbg: (
+    darkTheme: rgba(255, 255, 255, 0.1),
+    lightTheme: rgba(79, 172, 254, 0.1)
+  ),
+  headersearch: (
+    darkTheme: #fff,
+    lightTheme: rgba(79, 172, 254, 0.1)
+  ),
+  headermobileitem: (
+    darkTheme: #fff,
+    lightTheme: #31c6fe
+  ),
+  menubtnbg: (
+    darkTheme: rgba(255, 255, 255, 0.12),
+    lightTheme: #ecf6ff
+  ),
+  playgItembg: (
+    darkTheme: #2e2e2e,
+    lightTheme: #f6f6f6
+  ),
+  playgfieldbg: (
+    darkTheme: rgba(247, 247, 247, 0.07),
+    lightTheme: #f7f7f7
+  )
+);
+
+//get theme variables
+@mixin printVariables($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $value in $map {
+      @if $prop ==$mode {
+        --#{$key}: #{$value};
+      }
+    }
+  }
+}
+
+@mixin exportVariables($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $value in $map {
+      @if $prop ==$mode {
+        #{$key}: #{$value};
+      }
+    }
+  }
+}
+
+body.dark-mode {
+  @include printVariables("darkTheme");
+}
+
+body.light-mode {
+  @include printVariables("lightTheme");
+}
+
+:export {
+  @include exportVariables("darkTheme");
+}

@@ -1,0 +1,102 @@
+.footer_sec {
+  padding: 44px 0;
+  background-color: var(--footerBg);
+  position: relative;
+  @media (max-width: 575px) {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 25px;
+  }
+  .first_grid {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--sidebartextactive);
+      padding: 10px 0 23px 0;
+      width: 100%;
+      max-width: 263px;
+      @media (max-width: 899px) {
+        max-width: 100%;
+      }
+    }
+  }
+  .second_grid {
+    h5 {
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--footerLabel);
+      text-transform: capitalize;
+    }
+    ul {
+      padding-top: 15px;
+      padding-bottom: 0;
+      li {
+        padding: 5px 0;
+        color: var(--primaryGrey);
+
+        a {
+          color: var(--primaryGrey);
+          &:hover {
+            color: var(--activeColor);
+          }
+        }
+      }
+    }
+  }
+  .social_icon {
+    padding-top: 8px;
+    .social_area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 130px;
+      padding-top: 16px;
+      a {
+        color: var(--primaryGrey);
+
+        &:hover {
+          color: var(--activeColor);
+          img {
+            filter: invert(81%) sepia(48%) saturate(5467%) hue-rotate(168deg)
+              brightness(103%) contrast(104%);
+          }
+        }
+      }
+    }
+  }
+  .third_grid {
+    ul {
+      li {
+        display: flex;
+        align-items: start;
+        padding: 10px 0;
+        a {
+          display: flex;
+          align-items: start;
+        }
+        img {
+          margin-right: 20px;
+          width: 20px;
+          margin-top: 3px;
+        }
+        span {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+}
+.teams_foot {
+  padding: 22px 0;
+  text-align: center;
+  border-top: 1px solid var(--footerBgborder);
+  background: var(--activeHeaderColor);
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--footerTwotext);
+  }
+}
+.footer_main {
+  position: relative;
+}

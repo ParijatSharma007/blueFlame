@@ -1,0 +1,142 @@
+.upload_side_drawer {
+  :global(.MuiDrawer-paper) {
+    padding: 0;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--activeHeaderColor);
+  }
+  .drawer_head {
+    padding: 12px;
+    border-bottom: 1px solid var(--primaryGreytwo);
+    text-align: center;
+    position: relative;
+    button {
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      svg {
+        color: var(--textcolortext);
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      color: var(--textcolortext);
+    }
+  }
+  .drawer_body {
+    padding: 11px;
+    height: calc(100vh - 55px);
+    overflow-y: auto;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(49, 198, 254, 0.25);
+      border-radius: 10px;
+    }
+    ul {
+      li {
+        padding: 0;
+        display: block;
+        margin-top: 15px;
+        h4 {
+          font-size: 14px;
+          color: var(--sidebartextactive);
+          line-height: 2;
+        }
+        figure {
+          height: 170px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px 10px 0 0;
+        }
+        video {
+          width: 100%;
+          height: 100%;
+        }
+        :global(.MuiCard-root) {
+          border-radius: 10px;
+          box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+          position: relative;
+          border: 1px solid var(--sidebartextactive);
+          button {
+            position: absolute;
+            right: 0;
+            background-color: transparent !important;
+            svg {
+              color: var(--activeColor);
+            }
+          }
+          :global(.MuiCardContent-root) {
+            background-color: var(--cardboxbgbox);
+            padding: 0;
+            .content_box {
+              padding: 10px 12px 12px 12px;
+              background-color: var(--cardboxbgbox);
+              h6 {
+                color: var(--blueshadeIcon);
+              }
+            }
+            .doc_box {
+              background-color: var(--cardboxbgbox);
+
+              padding: 20px;
+              height: 170px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .file_upload {
+    position: sticky;
+    top: -12px;
+    background-color: var(--activeHeaderColor);
+    z-index: 1;
+    padding: 8px 0;
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      background-color: var(--activeColor);
+      border-radius: 0;
+      color: var(--whiteColor);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}

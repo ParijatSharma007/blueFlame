@@ -1,0 +1,215 @@
+.Card {
+  &.CardTwo {
+    :global(.MuiCard-root) {
+      border: 1px solid var(--notecardborder);
+    }
+    :global(.MuiCardContent-root) {
+      text-align: center;
+      padding: 32px 10px 11px 10px;
+
+      figure {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: auto;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+      .tool {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        min-width: auto;
+
+        height: auto;
+        &:hover {
+          background-color: transparent;
+        }
+        svg {
+          margin-bottom: 0;
+          width: 16px;
+          height: 25px;
+          path {
+            fill: var(--skiptxt);
+          }
+        }
+        button {
+          background-color: transparent;
+        }
+      }
+    }
+    &.activecard {
+      :global(.MuiCard-root) {
+      }
+      :global(.MuiCardContent-root) {
+        border: 1px solid rgba(49, 198, 254, 0.3);
+        box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+        .tool {
+          svg {
+            path {
+              fill: var(--activeColor);
+            }
+          }
+        }
+      }
+    }
+  }
+  // &.activecard {
+  //   :global(.MuiCard-root) {
+  //     border: 1px solid rgba(49, 198, 254, 0.3);
+  //     box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+  //   }
+  //   :global(.MuiCardContent-root) {
+  //     .tool {
+  //       svg {
+  //         path {
+  //           fill: var(--activeColor);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  :global(.MuiCard-root) {
+    background: var(--cardboxbgbox);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    cursor: pointer;
+
+    position: relative;
+    &:hover {
+      :global(.MuiCardContent-root) {
+        border: 1px solid rgba(49, 198, 254, 0.3);
+        box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+
+        .tool {
+          svg {
+            path {
+              fill: var(--activeColor);
+            }
+          }
+        }
+      }
+    }
+  }
+  :global(.MuiCardContent-root) {
+    text-align: center;
+    padding: 11px 10px 11px 10px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    .tool {
+      position: absolute;
+      right: 8px;
+      min-width: auto;
+      height: auto;
+      z-index: 999;
+      &:hover {
+        background-color: transparent;
+      }
+      svg {
+        margin-bottom: 0;
+        width: 15px;
+        height: 15px;
+        path {
+          fill: var(--infobg);
+        }
+      }
+    }
+    svg {
+      margin-bottom: 14px;
+    }
+    :global(.MuiTypography-root) {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--textcolortext);
+      height: 42px;
+      padding-top: 5px;
+      @media (max-width: 1440px) {
+        font-size: 12px;
+      }
+      @media (max-width: 500px) {
+        font-size: 11px;
+      }
+    }
+    .lottie_img {
+      @media (max-width: 500px) {
+        width: 78px !important;
+        height: 78px !important;
+      }
+    }
+  }
+}
+.pop_over {
+  padding: 2px;
+  :global(.MuiPopover-paper) {
+    background: #eff8ff;
+    border-radius: 4px;
+    overflow: initial;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 5px;
+
+      left: -22px;
+      border: 12px solid #eff8ff;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      z-index: 1200;
+
+      border-left-color: transparent;
+    }
+
+    ul {
+      padding: 0 8px;
+      li {
+        font-weight: 400;
+        font-size: 10px;
+        color: #7faed4;
+        border-bottom: 0.5px solid #d3e5f4;
+        padding: 7px 0;
+        cursor: pointer;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+.checkGuide {
+  position: relative;
+  :global(.MuiCard-root) {
+    :global(.MuiCheckbox-root) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+    }
+  }
+  :global(.MuiCardContent-root) {
+    position: relative;
+    z-index: 99;
+  }
+
+  :global(.Mui-checked) + :global(.MuiCardContent-root) {
+    border: 1px solid rgba(49, 198, 254, 0.3);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    background-color: var(--cardCheck);
+    z-index: 999;
+    .tool {
+      svg {
+        path {
+          fill: var(--activeColor);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+dev-deployment:
+ variables:
+   GIT_STRATEGY: fetch
+ script:
+   - bash ~/gitlab/NextJS/nextjs-projectdeploy.sh
+ environment:
+     name: Development
+     url : https://aperture-ui.dedicateddevelopers.us/
+ tags:
+   - node-docker
+ only:
+   - dev 
+

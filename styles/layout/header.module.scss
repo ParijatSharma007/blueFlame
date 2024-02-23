@@ -1,0 +1,316 @@
+.headerContainer {
+  background: var(--activeHeaderColor);
+  box-shadow: 0px 0px 30px rgba(79, 172, 254, 0.12);
+  padding: 16px 0;
+  .headermain {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .logo_area {
+      display: inline-block;
+      line-height: 0;
+      img {
+        @media (max-width: 575px) {
+          width: 102px;
+          height: 38px;
+        }
+      }
+    }
+    .menu_item_sec {
+      margin-left: auto;
+
+      align-items: center;
+      .menu_item {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 1px;
+          height: 30px;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--primaryGrey);
+          margin-right: 22px;
+          display: inline-block;
+          &:hover {
+            color: var(--activeColor);
+          }
+          @media (max-width: 1199px) {
+            margin-right: 18px;
+          }
+          @media (max-width: 992px) {
+            font-size: 12px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .header_btn_area {
+        display: flex;
+        align-items: center;
+        button {
+          margin-left: 33px;
+          @media (max-width: 1199px) {
+            margin-left: 18px;
+          }
+          @media (max-width: 992px) {
+            margin-left: 8px;
+          }
+
+          > div {
+            padding: 12px 26px;
+            @media (max-width: 992px) {
+              padding: 8px 17px;
+            }
+          }
+        }
+        .login_area {
+          display: flex;
+          align-items: center;
+          margin-left: 15px;
+          @media (max-width: 992px) {
+            margin-left: 8px;
+          }
+          &:hover {
+            span {
+              color: var(--activeColor);
+            }
+          }
+          img {
+            margin-right: 11px;
+          }
+          span {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--primaryGrey);
+          }
+        }
+      }
+    }
+    .mobile_menu {
+      margin-left: auto;
+
+      align-items: center;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        min-width: auto;
+        background: var(--mobileheadiconbg);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+      }
+
+      .searchBarMobileClose {
+        opacity: 0;
+        transition: all 0.2s ease-in;
+        position: absolute;
+        left: auto;
+        background: var(--activeHeaderColor);
+        padding: 10px;
+        right: 0;
+
+        :global(.MuiFormControl-root) {
+          margin-right: -12px;
+          :global(.MuiInputBase-root) {
+            padding: 0;
+            fieldset {
+              border-color: var(--headersearch);
+              border-width: 1px;
+            }
+            &:global(.Mui-focused) {
+              fieldset {
+                border-color: var(--headersearch);
+                border-width: 1px;
+              }
+            }
+          }
+          :global(.MuiInputBase-input) {
+            width: 100%;
+            min-width: auto;
+            padding: 7.5px 4px 7.5px 16px;
+            color: var(--calenderrightboxtext);
+            &::placeholder {
+              color: var(--recipesubheadtxt);
+              font-size: 16px;
+              font-family: "Poppins", sans-serif;
+            }
+          }
+        }
+      }
+      .searchBarMobileOpen {
+        opacity: 1;
+        position: absolute;
+        left: auto;
+        background: var(--activeHeaderColor);
+        padding: 10px;
+        right: 110px;
+      }
+    }
+  }
+}
+.sidebar {
+  .sidebar_logo {
+    padding-top: 8px;
+    position: relative;
+    a {
+      display: inline-block;
+      line-height: 0;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      svg {
+        color: var(--activeColor);
+      }
+    }
+  }
+  .login_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      padding-left: 5px;
+    }
+  }
+  ul {
+    li {
+      justify-content: center;
+    }
+  }
+}
+// header two //
+.webHeaderContainer {
+  .headermain {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+    .header_btn_area {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 130px);
+      justify-content: end;
+      .webSearch {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 352px;
+        :global(.MuiInputBase-root) {
+          height: 52px;
+          padding-right: 7px;
+          input {
+            border: none;
+            color: var(--primarylabel);
+          }
+          fieldset {
+            border: 1px solid var(--activeColor);
+            border-radius: 13px;
+          }
+          :global(.MuiInputAdornment-root) {
+            :global(.MuiButtonBase-root) {
+              width: 37.29px;
+              height: 37.29px;
+              background: #31c6fe;
+              border-radius: 13px;
+              svg {
+                path {
+                  fill: var(--white);
+                }
+              }
+            }
+          }
+          input {
+            &::placeholder {
+              font-weight: 500;
+              font-size: 16px;
+              color: #a9bdc0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .menu_drop {
+        position: relative;
+        margin-left: 50px;
+        @media (max-width: 899px) {
+          margin-left: 5px;
+        }
+        .login_area {
+          align-items: center;
+          background-color: transparent;
+          @media (max-width: 899px) {
+            padding-right: 0;
+          }
+          .avatar {
+            border-radius: 50%;
+            margin-right: 13px;
+            @media (max-width: 899px) {
+              margin-right: 0;
+            }
+          }
+          span {
+            margin-right: 7px;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--textcolortext);
+            @media (max-width: 899px) {
+              display: none;
+            }
+          }
+          .blue_arr {
+            @media (max-width: 899px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile_menu {
+  padding: 2px;
+  :global(.MuiMenu-paper) {
+    width: 100%;
+    max-width: 210px;
+    min-width: auto;
+    background-color: var(--activesideDashboard);
+    ul {
+      li {
+        color: var(--blueshadeIcon);
+        &:hover {
+          background-color: var(--chatWriteBox);
+        }
+      }
+    }
+  }
+}
+.header_drawer {
+  :global(.MuiPaper-root) {
+    background-color: var(--activeHeaderColor);
+    ul {
+      li {
+        color: var(--headermobileitem);
+        a {
+          color: var(--headermobileitem);
+        }
+      }
+    }
+  }
+  :global(.MuiDivider-root) {
+    border-color: var(--blueshade);
+  }
+}

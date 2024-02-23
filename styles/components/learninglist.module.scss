@@ -1,0 +1,26 @@
+.learning_list {
+  ul {
+    li {
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      color: var(--sidebartextactive) !important;
+      padding-left: 30px !important;
+      padding-bottom: 15px !important;
+      &:last-child {
+        padding-bottom: 0 !important;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("/assets/images/blueTick.svg") !important;
+        width: 20px !important;
+        height: 15px !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,323 @@
+.taskPaper {
+  box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 0 23px;
+  background-color: var(--cardboxbgbox);
+}
+
+.taskHeader {
+  padding: 22px 0;
+  border-bottom: 1px solid #d5e9fb;
+
+  h2 {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--textcolortext);
+    line-height: 1.5;
+  }
+
+  .searchTask {
+    width: calc(100% - 50%);
+    text-align: right;
+  }
+
+  :global(.MuiFormControl-root) {
+    max-width: 241px;
+    border: 1px solid var(--searchcolorborder);
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--searchcolorbg);
+
+    :global(.MuiInputBase-root) {
+      padding: 0;
+
+      input {
+        height: 38px;
+        font-weight: 500;
+        font-size: 12px;
+        border: none;
+        position: relative;
+        z-index: 11;
+        box-sizing: border-box;
+        color: var(--sidebartextactive);
+
+        &::placeholder {
+          color: #b3b3b3;
+          opacity: 1;
+        }
+      }
+
+      :global(.MuiInputAdornment-positionEnd) {
+        // position: absolute;
+        // left: 21px;
+        // z-index: 111;
+
+        svg {
+          margin: 0 14px 0 0;
+          color: var(--searchcolor);
+        }
+      }
+
+      fieldset {
+        border: 0;
+      }
+    }
+  }
+}
+
+.taskList {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.forRunning {
+  h4 {
+    span {
+      color: #4e75fe;
+    }
+  }
+}
+
+.taskCard {
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 19px;
+  width: 100%;
+  max-width: 355px;
+  position: relative;
+  min-height: 147px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -73px;
+    width: 73px;
+    height: 1px;
+    background-color: #c2eeff;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: var(--taskboxtxt);
+    margin-bottom: 13px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .complete {
+    span {
+      color: #11c54e !important;
+    }
+  }
+
+  .pending {
+    span {
+      color: #ff9900 !important;
+    }
+  }
+
+  p {
+    max-width: 268px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--primarylabel);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.taskCardHeader {
+  padding-bottom: 16px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--sidebartextactive);
+  }
+
+  button {
+    text-decoration: underline !important;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: transparent !important;
+    padding: 0;
+    color: var(--activeColor);
+    line-height: 1;
+    &:hover {
+      color: var(--sidebartextactive);
+    }
+  }
+}
+
+.forComplete {
+  background: var(--activeBodyColor);
+  border: 1px solid var(--borderlinecolor2);
+  margin-right: 144px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -73px;
+    width: 73px;
+    height: 1px;
+    background-color: var(--borderlinecolor);
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  &::before {
+    display: none;
+  }
+
+  h4 {
+    span {
+      color: #11c54e;
+    }
+  }
+}
+
+.forPending {
+  h4 {
+    span {
+      color: #ff9900;
+    }
+  }
+}
+
+.taskListStyled {
+  padding: 0;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -73px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    height: calc(100% - 144px);
+    width: 1px;
+    background-color: var(--borderlinecolor);
+  }
+
+  li {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 76px;
+    }
+  }
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 855px;
+  margin: 0 auto;
+  //   overflow: auto;
+}
+// details modal //
+.details_modal {
+  padding: 2px;
+  :global(.MuiBackdrop-root) {
+    background-color: var(--backdrop2);
+    backdrop-filter: blur(8px);
+  }
+  :global(.MuiPaper-root) {
+    width: 100%;
+    max-width: 727px;
+    padding: 0 21px;
+    background: var(--activesideDashboard);
+    box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+    h2 {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--taskboxtxt);
+      padding: 28px 0px 18px 0px;
+      border-bottom: 1px solid var(--registerborderline);
+    }
+    :global(.MuiDialogContent-root) {
+      padding: 22px 0;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgba(49, 198, 254, 0.25);
+        border-radius: 10px;
+      }
+      h5 {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--activeColor);
+      }
+      .grey_box {
+        background: var(--chatWriteBox);
+        border-radius: 10px;
+        padding: 25px 21px;
+        margin-top: 21px;
+        .inner_text {
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          h6 {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--sidebartextactive);
+            margin-bottom: 6px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--sidebartextactive);
+          }
+          ul {
+            padding: 0;
+            li {
+              padding: 0;
+              font-weight: 400;
+              font-size: 14px;
+              color: var(--sidebartextactive);
+              padding-bottom: 6px;
+              img {
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
